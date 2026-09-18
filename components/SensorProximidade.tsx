@@ -1,21 +1,21 @@
 import React, { useEffect, useRef, useState } from "react";
 
 import {
-  View,
-  Text,
-  StyleSheet,
-  TouchableOpacity,
-  Image,
   ActivityIndicator,
+  Image,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
 } from "react-native";
 
 import { useAudioPlayer, useAudioPlayerStatus } from "expo-audio";
 
 import {
-  isAvailableAsync,
   activate,
-  deactivate,
   addProximityStateListener,
+  deactivate,
+  isAvailableAsync,
 } from "expo-proximity";
 
 // --------------------------------------------------
@@ -445,6 +445,19 @@ export default function SensorProximidade() {
         <Text style={styles.instrucao}>
           Aproxime um objeto do sensor por 3 segundos para pausar a música.
         </Text>
+
+        <View style={styles.demonstracao}>
+          <Text style={styles.demonstracaoTitulo}>Demonstração</Text>
+
+          <Image
+            source={require("../assets/images/demonstracao.gif")}
+            style={styles.demonstracaoImagem}
+          />
+
+          <Text style={styles.biblioteca}>
+            Sensor fornecido por expo-proximity
+          </Text>
+        </View>
       </View>
     </View>
   );
@@ -826,6 +839,38 @@ const styles = StyleSheet.create({
     lineHeight: 15,
 
     marginTop: 15,
+  },
+
+  demonstracao: {
+    alignItems: "center",
+
+    marginTop: 18,
+  },
+
+  demonstracaoTitulo: {
+    color: "#FFFFFF",
+
+    fontSize: 13,
+
+    fontWeight: "700",
+
+    marginBottom: 8,
+  },
+
+  demonstracaoImagem: {
+    width: "100%",
+
+    height: 150,
+
+    borderRadius: 14,
+  },
+
+  biblioteca: {
+    color: "#BDA5D8",
+
+    fontSize: 10,
+
+    marginTop: 8,
   },
 
   // -----------------------------------------------
