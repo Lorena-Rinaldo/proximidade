@@ -142,4 +142,4 @@ npm run web
 
 ## Autor
 
-Desenvolvido por [Lorena Rinaldo](https://www.linkedin.com/in/lorena-rinaldo01/).
+Desenvolvido por [Lorena Rinaldo](https://www.linkedin.com/in/lorena-rinaldo01/) e Isabelly Ferreira.
